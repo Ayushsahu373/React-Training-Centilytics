@@ -1,6 +1,6 @@
 import React from "react";
 
-function List({ todos, EditItem, DeleteItem }) {
+function List({ todos,DeleteItem }) {
   return (
     <div>
       <ul>
