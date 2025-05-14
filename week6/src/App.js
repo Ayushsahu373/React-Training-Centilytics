@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from "./logo.svg";
+import "./App.css";
+// import TimerComponent from "./CustomHook/TimerUI";
+// import PasswordInput from "./CustomHook/PaswordUi";
+
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchCoins } from "../CryptoTracker/main files/Redux/CoinSlice";
+import { store } from "../CryptoTracker/main files/Redux/store";
+import CoinList from "../CryptoTracker/MainFiles/Components/CoinList";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <TimerComponent /
+      <br />
+      // <PasswordInput /> */}
+
+      <div>
+        <h1>Crypto Price Tracker</h1>
+        <CoinList />
+      </div>
     </div>
   );
 }
